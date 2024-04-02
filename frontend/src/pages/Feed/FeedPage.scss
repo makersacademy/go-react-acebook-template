@@ -1,0 +1,19 @@
+.feed-container{
+padding: 5%;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+   .feed-all-posts{
+      .feed-post{
+         border: 1px solid gray;
+      }
+   }
+
+   .feed-create-post{
+
+   }
+
+}

@@ -4,7 +4,7 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 export const login = async (email, password) => {
   const payload = {
     email: email,
-    password: password,
+    password: password
   };
 
   const requestOptions = {
@@ -28,25 +28,24 @@ export const login = async (email, password) => {
   }
 };
 
-export const signup = async (email, password) => {
-  const payload = {
-    email: email,
-    password: password,
-  };
+export const signup = async (email, password, username, image) => {
+  const formData = new FormData();
+  formData.append('email', email);
+  formData.append('password', password);
+  formData.append('username', username);
+  formData.append('image', image);
 
   const requestOptions = {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
+    body: formData,
   };
 
   let response = await fetch(`${BACKEND_URL}/users`, requestOptions);
 
   // docs: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201
   if (response.status === 201) {
-    return;
+    let data = await response.json();
+    return data.token;
   } else {
     throw new Error(
       `Received status ${response.status} when signing up. Expected 201`

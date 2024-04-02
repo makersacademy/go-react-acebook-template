@@ -35,8 +35,9 @@ const completeSignupForm = async () => {
 
 describe("Signup Page", () => {
   beforeEach(() => {
-    vi.resetAllMocks();
+    vi.resetAllMocks(); 
   });
+
 
   test("allows a user to signup", async () => {
     render(<SignupPage />);
@@ -46,14 +47,17 @@ describe("Signup Page", () => {
     expect(signup).toHaveBeenCalledWith("test@email.com", "1234");
   });
 
-  test("navigates to /login on successful signup", async () => {
+  test("navigates to /posts on successful signup", async () => {
     render(<SignupPage />);
 
     const navigateMock = useNavigate();
 
     await completeSignupForm();
 
-    expect(navigateMock).toHaveBeenCalledWith("/login");
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+
+    expect(navigateMock).toHaveBeenCalledWith("/posts");
   });
 
   test("navigates to /signup on unsuccessful signup", async () => {
