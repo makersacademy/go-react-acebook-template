@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
+import {Link, useNavigate} from "react-router-dom";
+import "./LoginPage.css";
 import { login } from "../../services/authentication";
 
 export const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -15,8 +16,8 @@ export const LoginPage = () => {
       localStorage.setItem("token", token);
       navigate("/posts");
     } catch (err) {
-      console.error(err);
       navigate("/login");
+      setErrorMessage("User does not exist or invalid credentials.");
     }
   };
 
@@ -29,25 +30,38 @@ export const LoginPage = () => {
   };
 
   return (
-    <>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email:</label>
-        <input
-          id="email"
-          type="text"
-          value={email}
-          onChange={handleEmailChange}
-        />
-        <label htmlFor="password">Password:</label>
-        <input
-          id="password"
-          type="password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
-        <input role="submit-button" id="submit" type="submit" value="Submit" />
-      </form>
-    </>
+      <div className="container">
+        <div className="left-half">
+          <div className="login-container">
+            <form className="login-form" onSubmit={handleSubmit}>
+              <h1>Login</h1>
+              <h2>Already got an account?</h2>
+              {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+              <form onSubmit={handleSubmit}>
+              <label htmlFor="email">Email:</label>
+            <input
+              id="email"
+              type="text"
+              value={email}
+              onChange={handleEmailChange}
+            />
+            <label htmlFor="password">Password:</label>
+            <input
+              id="password"
+              type="password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+            <input role="submit-button" id="submit" type="submit" value="Submit" />
+          </form>
+            </form>
+          </div>
+        </div>
+        <div className="right-half">
+          <h3>New Here?</h3>
+          <p>Sign up and start sharing moments with your friends today! Join our community and explore endless possibilities together.</p>
+          <Link className="signup" to="/signup">Sign Up</Link>
+        </div>
+      </div>
   );
 };
