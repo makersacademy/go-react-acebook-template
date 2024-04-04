@@ -1,0 +1,23 @@
+.post-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.delete-button {
+  width: 14px;
+  height: 14px;
+}
+
+.user-image {
+  width: 12%;
+  height: 12%;
+}
+
+.post-image {
+  right: 0;
+}
+
+.post-user {
+  display: flex;
+}

@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/posts",
-    element: <FeedPage />,
+    element: <FeedPage />
   },
 ]);
 

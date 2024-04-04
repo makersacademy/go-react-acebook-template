@@ -70,10 +70,10 @@ To create entries in the database, we create a struct, and use the `.Save`
 function:
 
 ```golang
-	testPost := models.Post{
-		Message: fmt.Sprintf("This is a test message created at %v!", time.Now()),
-	}
-	testPost.Save()
+	// testPost := models.Post{
+	// 	Message: fmt.Sprintf("This is a test message created at %v!", time.Now()),
+	// }
+	// testPost.Save()
 ```
 
 
