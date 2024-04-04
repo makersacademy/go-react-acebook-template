@@ -23,7 +23,7 @@ the application works.
 
 ### Card wall
 
-REPLACE THIS TEXT WITH A LINK TO YOUR CARD WALL
+https://trello.com/invite/b/YyHEoIyD/ATTIe230926302b5d8daad7ead41ef861018888CCDA1/xenon-acebook-meta
 
 ### Quickstart
 

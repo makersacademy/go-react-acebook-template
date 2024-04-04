@@ -9,4 +9,5 @@ func setupUserRoutes(baseRouter *gin.RouterGroup) {
 	users := baseRouter.Group("/users")
 
 	users.POST("", controllers.CreateUser)
+	users.GET("", controllers.GetUser)
 }

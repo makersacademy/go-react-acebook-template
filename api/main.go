@@ -26,6 +26,7 @@ func main() {
 	testPost.Save()
 
 	app.Run(":8082")
+
 }
 
 func setupApp() *gin.Engine {
