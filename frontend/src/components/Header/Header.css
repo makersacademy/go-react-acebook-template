@@ -1,0 +1,38 @@
+.header {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  background-color:rgb(142, 142, 154);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 45px;
+  height: 45px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.header a{
+  margin: 5px;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.header a:hover {
+  color: rgb(51, 51, 51);
+}

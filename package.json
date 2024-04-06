@@ -11,5 +11,8 @@
   },
   "engines": {
     "npm": "YOU ARE IN THE WRONG DIRECTORY! cd to api or frontend folder to run this command"
+  },
+  "devDependencies": {
+    "sass": "^1.72.0"
   }
 }
