@@ -12,15 +12,13 @@ We recommend you look through these docs together.
 | [Full-Stack Overview](./docs/full-stack_overview.md) | Frontend/Backend communication |
 | [Authentication](./docs/authentication.md)           | JSON Web Tokens                |
 
-
 ## Reference Docs:
 
-You do not need to read all of these docs, but they can be useful if you
-come across something in the project you don't understand.
+You do not need to read all of these docs, but they can be useful if you come
+across something in the project you don't understand.
 
-| Title                                                     | Summary                                       |
-| --------------------------------------------------------- | --------------------------------------------- |
-| [Backend Structure](./docs/backend_structure.md)          | `main.go`, routers, controllers, models        |
-| [Frontend Structure](./docs/frontend_structure.md)        | `App.jsx`, routes, pages, components          |
-| [Environment Variables](./docs/environment_variables.md)  | `process.env`,`import.meta.env`, `.env` files |
-| [JS Modules](./docs/modules.md)                              | `import` vs. `require`                        |
+| Title                                                    | Summary                                       |
+| -------------------------------------------------------- | --------------------------------------------- |
+| [Backend Structure](./docs/backend_structure.md)         | `main.go`, routers, controllers, models       |
+| [Frontend Structure](./docs/frontend_structure.md)       | `App.jsx`, routes, pages, components          |
+| [Environment Variables](./docs/environment_variables.md) | `process.env`,`import.meta.env`, `.env` files |

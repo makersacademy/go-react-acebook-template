@@ -8,8 +8,8 @@ implemented authentication yet, that's not going to impede you right now.
 
 1. A registered user submits their email address and password via the React
    front end.
-2. The Express backend receives the data and tries to find a user in the DB with
-   the same email address.
+2. The Gin backend receives the data and tries to find a user in the DB with the
+   same email address.
 3. If a user is found, the password in the database is compared to the password
    that was submitted.
 4. If the passwords match, a JSON Web Token is generated and returned, as part

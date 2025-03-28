@@ -26,14 +26,20 @@ You don't need to do a deep dive on each one right now. Instead, try to get a
 feeling for the big picture and then dive into the details when a specific task
 pushes you in that direction.
 
-### **R** is for React
+### Gin
+
+[Gin](https://github.com/gin-gonic/gin) is a high-performance, lightweight web
+framework for the Go programming language, similar to Express in JS. It has
+support for routing and middlware.
+
+### React
 
 [React](https://reactjs.org/) is a hugely popular tool that is used to build
 engaging front ends. The basic principle is that the front end is split up into
 _components_, each of which _could_ include some logic, template structure
 (HTML) and styling (CSS).
 
-### **N** is for Node
+### Node
 
 JavaScript was originally designed to run exclusively in browsers, such as
 Chrome. [Node](https://nodejs.org/en/) is a tool that allows you to run
@@ -57,9 +63,9 @@ This application is comprised of two distinct pieces:
 - A frontend built with React
 
 It's important to note that these are two completely different programs. They
-don't share any code. They have their own files and dependencies.
-Imagine that they're always running on two different machines (though when you
-are working locally, everything will be running on your computer).
+don't share any code. They have their own files and dependencies. Imagine that
+they're always running on two different machines (though when you are working
+locally, everything will be running on your computer).
 
 The **only way** the frontend can communicate with the API is through HTTP
 requests over the network. The React front end sends HTTP requests to the

@@ -10,24 +10,23 @@ export const FeedPage = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (token) {
-      getPosts(token)
-        .then((data) => {
-          setPosts(data.posts);
-          localStorage.setItem("token", data.token);
-        })
-        .catch((err) => {
-          console.error(err);
-          navigate("/login");
-        });
-    }
+    if (!token) return navigate("/login");
+
+    getPosts(token)
+      .then((data) => {
+        setPosts(data.posts);
+        localStorage.setItem("token", data.token);
+      })
+      .catch((err) => {
+        console.error(err);
+        navigate("/login");
+      });
   }, [navigate]);
 
-  const token = localStorage.getItem("token");
-  if (!token) {
-    navigate("/login");
-    return;
-  }
+  const logOutHandler = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
 
   return (
     <>
@@ -37,6 +36,7 @@ export const FeedPage = () => {
           <Post post={post} key={post._id} />
         ))}
       </div>
+      <button onClick={logOutHandler}>Log Out</button>
     </>
   );
 };
